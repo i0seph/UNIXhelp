@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- commanz/cmd3.3.html -->
+
+<HEAD>
+<TITLE>표준 출력을 파일에 추가하기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>표준 출력을 파일에 추가하기</H1>
+
+<P>
+표준 출력을 방향전환해서 파일로 저장하고자 할때, 
+이미 있는 파일에 덧붙히려면, <SAMP>&gt;&gt;</SAMP> 문자를 
+사용합니다. 이때, 지정한 파일이 없으면, 새로 만듭니다. 
+예를 들면,</P>
+
+<PRE WIDTH=80>   <STRONG>cat part1 &gt; chapt2
+   cat part2 &gt;&gt; chapt2</STRONG>
+</PRE>
+
+<P>
+<SAMP>part1</SAMP>이라는 파일의 내용을 <SAMP>chapt2</SAMP>라는 
+파일로 저장하고 나서, <SAMP>part2</SAMP>라는 파일의 내용을 
+이미 있는 <SAMP>chapt2</SAMP>라는 파일에 덧붙히는 경우입니다. 
+이런 경우는 <SAMP>chapt2</SAMP>라는 파일이 있건 말건, 무조건, 
+<SAMP>part1</SAMP>, <SAMP>part2</SAMP> 파일의 내용을 차례로 
+저장하는데, 유용하게 사용되지요.</P>
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- concepts/regexp1.1.html -->
+<HEAD>
+<TITLE>파일 이름에서 사용하는 정규 표현식의 보기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>파일 이름에서 사용하는 정규 표현식의 보기</H1>
+
+<P>여러 문자열로 대치 되는 파일 이름:</P>
+
+<PRE WIDTH=80>   <STRONG>ls *.fm</STRONG>
+</PRE>
+
+<P>
+위 예제는 <SAMP>.fm</SAMP> 문자열로 끝나는 모든 파일을 
+보여줍니다.
+</P>
+
+<HR>
+
+<P>특정 파일을 지우는 예제:</P>
+
+<PRE WIDTH=80>   <STRONG>rm prog.?</STRONG>
+</PRE>
+
+<P>
+윗 예제는 <SAMP>prog.c</SAMP>, <SAMP>prog.o</SAMP>, <SAMP>prog.3</SAMP> 
+파일 등 <SAMP>prog.</SAMP> 문자열로 시작해서, 마지막 한 글자만 
+있는 모든 파일을 지우는 명령입니다.
+</P>
+
+<HR>
+
+<P>일정한 패턴을 가진 모든 파일을 복사하는 예제:</P>
+
+<PRE WIDTH=80>   <STRONG>cp [pP]art[0-9] ../book</STRONG>
+</PRE>
+
+<P>
+윗 예제는 <SAMP>p</SAMP> 또는 <SAMP>P</SAMP>로 시작하고, 
+그 다음 문자들은 <SAMP>art</SAMP> 이며, 끝 한 문자는 
+<SAMP>0</SAMP>부터 <SAMP>9</SAMP>까지인 모든 파일을 
+해당 경로로 복사하는 명령입니다.
+</P>
+
+<P>
+그래서, <SAMP>part1</SAMP>, <SAMP>Part7</SAMP> 같은 파일들이 
+<SAMP>book</SAMP> 경로로 복사되겠지요. 
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

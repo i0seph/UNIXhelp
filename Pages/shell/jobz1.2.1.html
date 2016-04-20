@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz1.2.1.html -->
+
+<HEAD>
+<TITLE>foreground 프로세스 보류하기 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>foreground 프로세스 보류하기 보기</H1>
+
+<P>예제:</P>
+
+<PRE WIDTH=80>   <STRONG>find / -name *.c -print</STRONG>
+   find: cannot read /dev/diag
+   ...
+   <STRONG>^Z</STRONG>
+   [1]+  Stopped                 find / -name *.c -print
+   <STRONG>ps</STRONG>
+   22926 p9 S     0:03 -Tcsh (Tcsh)
+   29857 p9 T     0:00 find / -name *.xdh -print
+   29859 p9 R     0:00 ps
+   <STRONG>mail tony &lt; memo.txt</STRONG>
+</PRE>
+
+<P>
+이것은 먼저
+<A HREF="../glossary/gr.html#rootdir">루트 디렉토리</A>를 
+대상으로 <SAMP>.c</SAMP> 문자열을 포함하는 모든 파일을 
+찾기 명령을 내린 것입니다.</p>
+
+<P>
+이 작업은 시스템 전체의 모든 파일을 검색하는 것임으로 
+엄청난 시간이 걸립니다. 이때, 사용자가 
+이것을 일단 보류하고,</P>
+
+<P>
+현재 자신의 프로세스를 살펴 보고, 
+<SAMP>tony</SAMP>라는 사용자에게 편지를 보내는 것입니다. 
+편지 보내기를 끝내면, 
+<A HREF="jobz1.2.2.html">프로세스를 계속 진행</A>하거나, 
+아니면, <A HREF="jobz3.2.html">background job</A>으로 
+바꿀 수 있겠지요.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

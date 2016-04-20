@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz1.html -->
+
+<HEAD>
+<TITLE>foreground로 프로세스 실행하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>foreground로 프로세스 실행하기</H1>
+
+<P>
+사용자가 쉘 프롬프트 상에서 하나의 명령을 입력하면, 
+쉘은 자신의 프로세스에 대한 하위 프로세스로 
+그 명령을 <A HREF="fork.html">선택</A>합니다.
+</P>
+
+<P>
+이렇게 되면, 상위 프로세스인 그 쉘 프로세스는 
+그 하위 프로세스가 종료될 때까지 아무 작업도 하지 않습니다. 
+즉, 이런 상태에서는 다른 명령을 사용할 수 없지요. 
+이렇게 명령을 입력하고 실행해서 생기는 프로세스를 
+<EM>foreground 프로세스</EM>라고 합니다.
+</P>
+
+<P>
+그 하위 프로세스가 종료되면, 다시 쉘 프로세스는 활성화 되어, 
+쉘 프롬프트가 나타나고, 다른 명령을 기다립니다.</p>
+</P>
+
+<UL>
+<LI><A HREF="jobz1.1.html">foreground 프로세스 중지하기</A></LI>
+<LI><A HREF="jobz1.2.html">foreground 프로세스 보류하기</A></LI>
+<LI><A HREF="jobz3.2.html">foreground 프로세스를 background로 바꾸기</A></LI>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

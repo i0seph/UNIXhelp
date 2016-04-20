@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- examples/man.html -->
+
+<HEAD>
+<TITLE>man 명령 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>man</SAMP> 명령 사용보기</H1>
+
+<P>
+섹션 1(one)에 대한 계관 보기:</p>
+
+<PRE WIDTH=80>   <STRONG>man 1 intro</STRONG>
+</PRE>
+
+<P>
+이 명령은 사용자 명령어들에 대한 계관을 보여줍니다.
+</P>
+
+<HR>
+
+<P>
+"mail" 이라는 키워드들 가진 온라인 설명서를 찾는 경우:</p>
+
+<PRE WIDTH=80>   <STRONG>man -k mail</STRONG>
+</PRE>
+
+<P>
+이것은 각 명령의 대략적인 설명이 담긴 synopsis에서 
+해당 문자열을 찾습니다.
+</P>
+
+<HR>
+
+<P>
+"copy files" 구절이 포함된 온라인 설명서를 찾는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>man -k 'copy files'</STRONG>
+</PRE>
+
+<P>
+이렇게 공백문자가 포함될 때는 따움표로 묶어줍니다.
+</P>
+
+<HR>
+
+<P>그 명령이 무엇인지 알아보는 방법</P>
+
+<PRE WIDTH=80>   <STRONG>whatis more</STRONG>
+   more, page (1)    - browse or page through a text file
+</PRE>
+
+<P>
+단지 그 명령이 무엇인지만을 알아보려고 할때 윗방법이 사용됩니다.
+</P>
+
+<HR>
+
+<P>
+<STRONG>cp</STRONG> (파일 복사) 명령에 대한 
+온라인 설명서를 보려고 할때:</p>
+
+<PRE WIDTH=80>   <STRONG>man cp</STRONG>
+</PRE>
+
+<P>
+이때 화면 아랫쪽에 --More--48% 이런 식으로 표시되는 것은 
+그 설명서의 현재 위치를 말합니다.
+</P>
+
+<P>
+사이 띄우게를 누르면 다음 화면을 계속 보며, 
+<STRONG>q</STRONG> 글쇠를 누르면 man이 끝납니다.
+</P>
+
+<HR>
+
+<P>
+<STRONG>man</STRONG> 명령으로 사용설명서를 인쇄할 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>man -t man</STRONG>
+</PRE>
+
+<P>
+이 명령은 기본 프린터로 man에 대한 사용설명서를 
+인쇄합니다.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

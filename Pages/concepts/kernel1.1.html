@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- concepts/kernel1.1.html -->
+
+<HEAD>
+<TITLE>커널 파일의 위치</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>커널 파일의 위치</H1>
+
+<P>
+루트 디렉토리에는 <A HREF="../glossary/gb.html#boot">부트</A> 프로그램과 
+커널 파일이 있습니다. 
+커널 파일의 이름은 각각의 제작회사에 따라 조금씩 차이는 있지만, 
+대부분 <STRONG>nix</STRONG> 문자열을 포함하고 있습니다. 
+그래서, <A HREF="../tasks/defining.html">와일드카드 문자</A>를 
+사용해서 다음과 같이 찾아보면, 
+쉽게 찾을 수 있겠지요. 
+</P>
+
+<PRE><SAMP>   <STRONG>ls /*nix*</STRONG>
+   -rwxr-----  1 root      1558734 Sep 24  1992 /vmunix
+</SAMP></PRE>
+
+<P>
+윗 명령은 <SAMP>nix</SAMP> 문자열이 포함되는 모든 파일을 루트 경로 안에서 
+찾아 보여줍니다. 윗 예제에서는 <SAMP>vmunix</SAMP> 라는 파일이 
+바로 커널 파일의 이름임을 알 수 있습니다. 
+</P>
+
+<P>
+리눅스에서는 이 커널 파일을 압축해서 사용하기도 하지요. 
+그래서, 압축을 뜻한 것으로 <SAMP>z</SAMP> 문자를 끝에 사용해서 
+표시하기도 합니다.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

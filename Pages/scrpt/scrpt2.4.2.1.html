@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt2.4.2.1.html -->
+
+<HEAD>
+<TITLE>&& 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>&& 사용 보기</H1>
+
+<P>이전 명령의 실행 상태에 따라, 다음 명령 실행시키기:</p>
+
+<PRE WIDTH=80>   <STRONG>cat deliver</STRONG>
+   #!/bin/sh
+   # 사용법: deliver username  파일
+   { cat $2 | write $1 ; } && echo 작업완료
+</PRE>
+
+<P>윗 스크립트를 다음과 같이 사용한다면:</p>
+
+<PRE WIDTH=80>   <STRONG>deliver keith greeting</STRONG>
+</PRE>
+
+<P>
+먼저 <SAMP>{ cat $2 | write $1 ; }</SAMP> 부분을 실행합니다. 
+그래서, <SAMP>greeting</SAMP> 파일을 cat 명령으로 표준 출력으로 
+보내어, 그것을 
+<A HREF="../commanz/cmd3.html">파이프</A>를 통해, 
+<STRONG>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?write">write</A>
+</STRONG>
+명령의 표준 입력으로 사용하고, 그결과 
+keith 사용자에게 그 내용이 보여지겠지요.
+</P>
+
+<P>
+여기서 <A HREF="scrpt2.html">명령행 인자변수</A>들인 
+$1, $2 변수들을 사용한 것과, 
+파이프 기능의 사용이 거기서 끝남을 알리는 ; (세미콜론) 문자가 
+사용되었음을 참고하십시오.
+</P>
+
+<P>
+이때, 첫번째 명령이 성공이 성공적으로 끝나면, 
+두번째 명령이 실행되어, <samp>작업완료</samp>라는 메시지를 
+결과적으로 <A HREF="../commanz/cmd3.html">표준출력</A>으로 보이겠지요.</p>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

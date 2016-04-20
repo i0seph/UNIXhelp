@@ -1,0 +1,194 @@
+#!/usr/local/perl
+#
+# unixhelp_search
+#
+# CGI script interface to SWISH search engine
+# Written by Gavin Inglis <Gavin.Inglis@ed.ac.uk> June 1995
+
+#########################################################################
+# Edit the following configuration variables to customise for your site
+#
+# location of SWISH executable
+
+$SWISH = '/home/joseph/bin/swish';
+
+#
+# location of index file
+
+$INDEX = '/home/unixhelp/index.swish';
+
+#
+# URL of UNIXhelp directory
+
+$DIR_HREF = 'http://unixhelp.ed.ac.uk';
+
+#
+# URL of search script
+
+$search_url = 'http://unixhelp.ed.ac.uk/CGI/unixhelp_search';
+
+#
+##########################################################################
+
+
+$input_line = $ENV{QUERY_STRING};  # read any arguments
+if ($input_line eq "") {     # if none yet
+  $search_string = "";       # use default values for form
+  $max_hits = 20;
+  &form;                     # return form
+  exit 0;                    # and exit
+} else {
+  &extract_args;             # get $search_string and $max_hits
+  &header;
+  &search;
+  &footer;
+  exit 0;
+}
+
+sub extract_args {
+  ($search_string,$max_hits) = split (/&/,$input_line);
+  $search_string =~ s/search_term=(.*)/$1/;     # strip off label
+  $search_string =~ s/\+/ /g;                   # convert +s to spaces
+  $search_string =~ s/%2B/ /g;                  # convert +s to spaces
+  $max_hits =~ s/max_hits=(.*)/$1/;             # strip off label
+}
+
+sub header {
+  print <<EOF;
+Content-type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD><TITLE>UNIXhelp search results: $search_string</TITLE></HEAD>
+<BODY>
+
+EOF
+}
+
+sub footer {
+  print <<EOF;
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="$DIR_HREF/TOP_.html"><IMG SRC="$DIR_HREF/Images/weetop.gif" ALT="[Home]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG
+SRC="$DIR_HREF/Images/weesearch.gif" ALT="[Search]"></A>
+<A HREF="$DIR_HREF/index_index.html"><IMG SRC="$DIR_HREF/Images/weeindex.gif" ALT="[Index]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+</BODY>
+</HTML>
+EOF
+}
+
+sub try_again {
+  print "<P><A HREF=\"$search_url\">Try again</A></P>\n";
+}
+
+sub search {
+  if (length($search_string) == 0) {
+    print "<H1><IMG SRC=\"$DIR_HREF/Images/search.gif\" ALT=\"\">No search term</H1>\n";
+    print "<P>Please supply a word or phrase to search for.</P>\n";
+    &form2;
+  } elsif (($max_hits < 1) || ($max_hits > 100)) {
+    print "<H1><IMG SRC=\"$DIR_HREF/Images/search.gif\" ALT=\"\">Number of matches out of range</H1>\n";
+    print "<P><EM>$max_hits</EM> is not an appropriate value for the maximum number of matches.</P>\n"; 
+    print "<P>You can see up to 100 matches on <EM>$search_string</EM>.</P>\n";
+    print "<P>Please give a value between 1 and 100.</P>\n";
+    &form2;
+  } else {
+    print "<H1><IMG SRC=\"$DIR_HREF/Images/search.gif\" ALT=\"\">Search for <EM>$search_string</EM></H1>\n";
+    &interpret;
+  }
+}
+
+sub interpret {
+  print "<P>Your search produced the following results:</P>\n";
+  open(RESULTS,"$SWISH -f $INDEX -w \"$search_string\" |");
+  if (eof(RESULTS)) {
+    &showerr("Unable to start search engine on host");
+    return;
+    }
+  $result = <RESULTS>;
+  $listopen = 0;
+  until ($result =~ /^\./) {
+    if (($result =~ /^#/) || ($result=~ /^search/)) { 
+      1;                                              # search result comment
+      }                              
+    elsif ($result =~ /^err: /) {
+      &showerr("$'");                                 # search error
+      }
+    else {
+      $result =~ /^\d+ (\S+) \"(.*)\"/;
+      if ($listopen == 0) {
+        print "<OL>\n";
+        $listopen = 1;
+        }
+      if ($max_hits > 0) {
+        print "<LI><A HREF=\"$1\">$2</A></LI>\n";
+        $max_hits--
+        }
+      }
+    }
+  continue {
+    $result = <RESULTS>;
+  }
+  if ($listopen == 1) {
+    print"</OL>\n";
+    }
+}  
+
+sub showerr {
+  local($reason) = @_;
+  print "<H2>Error</H2>\n";
+  print "<H3>$reason</H3>\n";
+}
+
+sub form {
+  print <<EOF;
+Content-type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+
+<HEAD>
+<TITLE>UNIXhelp Searchable Index</TITLE>
+</HEAD>
+
+<BODY>
+<H1><IMG SRC="$DIR_HREF/Images/search.gif" ALT="">UNIXhelp Searchable Index</H1>
+
+<H2>Instructions</H2>
+
+<P>Type the key word or words that you want to search for in the box below
+and then select the <STRONG>Search</STRONG> button. If you specify more
+than one word the search will only return documents which contain
+every one.</P>
+
+<P>You may also change the maximum number of results which will be
+returned in response.</P>
+
+EOF
+  &form2;
+  &footer;
+}
+
+sub form2 {
+  print <<EOF;
+
+<FORM METHOD="GET" ACTION="$search_url">
+
+<H3>Search for:</H3>
+<INPUT TYPE="text" NAME="search_term" SIZE="20" MAXLENGTH="40" VALUE="$search_string">
+
+<H3>Max number of matches:</H3>
+<INPUT TYPE="text" NAME="max_hits" SIZE="5" MAXLENGTH="5" VALUE="$max_hits">
+
+<P></P>
+
+<INPUT TYPE="reset" VALUE="Reset form">
+<INPUT TYPE="submit" VALUE="Search">
+
+</FORM>
+EOF
+}

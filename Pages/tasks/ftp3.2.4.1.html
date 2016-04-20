@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/ftp3.2.4.1.html -->
+
+<HEAD>
+<TITLE>파일 전송 큐 검사하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>파일 전송 큐 검사하기</H1>
+
+<P>
+파일 전송 큐를 검사하는 명령은 다음과 같습니다:</P>
+
+<PRE WIDTH=80>   <STRONG>hhq</STRONG>
+</PRE>
+
+<P>
+이 명령이 실행되면, 전송 상태에 대한 요약이 보여지는데, 
+자세한 것은 아래를 보십시오.</P>
+
+<HR>
+
+<P>
+특정 파일에 대한 전송 상태를 보려면 다음과 같이 합니다:</P>
+
+<PRE WIDTH=80>   <STRONG>hhq <EM>transfer_id</EM></STRONG>
+</PRE>
+
+<P>이 명령은 다음과 같은 형식으로 그 결과를 보여 줄 것입니다.</P>
+
+<PRE WIDTH=80>
+   Owner   Id           Address          Status     Size Files
+   erpl08  002910       castle           Pending    24   myfile
+</PRE>
+
+<P>
+여기서 중요한 것은 전송에 대한 상태를 보여주고 있는 것인데, 
+각 상태에 대한 메시지의 설명은 아래와 같습니다.</P>
+
+<DL>
+<DT><STRONG><SAMP>Pending</SAMP></STRONG></DT>
+<DD><P>아직 전송 작업이 시작되지 않았음.</P></DD>
+
+<DT><STRONG><SAMP>Waiting Retry</SAMP></STRONG></DT>
+<DD><P>전송 작업을 준비함.</P></DD>
+
+<DT><STRONG><SAMP>Sending</SAMP></STRONG></DT>
+<DD><P>전송 시작.</P></DD>
+</DL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

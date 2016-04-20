@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- concepts/procs.html -->
+
+<HEAD>
+<TITLE>프로세스</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>프로세스</H1>
+
+<P>
+당신이 하나의 명령을 입력하면, 하나의 프로그램이 실행됩니다. 
+이 실행되는 동안의 프로그램을 <EM>프로세스(process)</EM>라고 
+합니다. 여기서 이해가 필요한 것은 
+이 프로세스는 그 프로그램 파일 자체가 아니라, 
+<A HREF="bin.html">파일 시스템</A>에서 호출된 하나의 
+복사본이라는 사실입니다. 
+즉, 프로그램 파일은 하나이지만, 그 프로그램에 대한 프로세스는 
+여러개가 있을 수 있다는 이야기입니다.</P>
+</P>
+
+<P>
+하나의 운영체제가 <A HREF="../glossary/gb.html#boot">부팅</A>되면, 
+하나의 프로세스가 실행됩니다. 
+그리고는 그 프로세스의 하위 프로세스로 다른 모든 프로세스들이 
+관리됩니다. 그리고, 그 프로세스들은 고유한 번호를 가지고 있는데, 
+이것을 <A HREF="../shell/pid.html">PID</A>라고 합니다. 
+사용자는 이 번호를 가지고 각 프로세스를 처리할 수 있습니다.</P>
+
+<P>
+먼저 당신이 <A HREF="../basics/basic1.html">접속</A>을 하면, 
+<A HREF="../shell/index.html">쉘</A>이 실행되겠지요. 즉, 
+이렇게 접속한후 <A HREF="../commanz/index.html">명령</A>을 
+내려 사용하는 모든 프로세스는 이 쉘 프로세스의 
+하위 프로세스로 관리됩니다. 하나의 프로세스에는 여러개의 하위 
+프로세스가 있을 수 있지만, 그 프로세스에 대한 상위 프로세스는 
+단지 하나 뿐임을 기억하십시오.
+</P>
+
+<P>
+보다 자세한 사항은 
+<A HREF="../shell/jobz.html">job과 프로세스 관리하기</A>를 참조하십시오.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

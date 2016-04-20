@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/change_own.html -->
+
+<HEAD>
+<TITLE>파일과 디렉토리의 그룹 바꾸기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>파일과 디렉토리의 그룹 바꾸기</H1>
+
+<P>
+모든 사용자는 하나 이상의 <A HREF="../glossary/gg.html#group">그룹</A>에
+속해 있습니다. 
+현재 당신이 속해 있는 그룹을 알려면, 
+다음과 같은 명령을 사용합니다.</P>
+
+<PRE WIDTH=80>    <STRONG>groups</STRONG>
+</PRE>
+
+<P>
+한편, 어떤 사용자의 그룹을 알고 싶으면, 
+다음과 같은 명령을 사용합니다.</P>
+
+<PRE WIDTH=80>    <STRONG>groups <EM>사용자이름</EM></STRONG>
+</PRE>
+
+<P>
+당신의 파일과 디렉토리의 그룹 정보는 모두 
+당신이 속한 <A HREF="../glossary/gg.html#group">그룹</A>과 
+같습니다. 
+</P>
+
+<P>이런 그룹 정보를 보려면 다음과 같은 명령을 사용합니다:</P>
+
+<PRE WIDTH=80>    <STRONG>ls -gl</STRONG>
+</PRE>
+
+<P>
+또한 당신은 다음과 같은 명령으로 
+이 그룹 정보를 바꿀 수도 있습니다.
+</P>
+
+<PRE WIDTH=80>    <STRONG>chgrp <EM>그룹이름 파일/디렉토리이름</EM></STRONG>
+</PRE>
+
+<P>
+물론 이때 그룹이름으로 사용될 그룹은 당신이 속해 있는 그룹이어야
+하겠지요.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

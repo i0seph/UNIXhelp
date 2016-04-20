@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz1.1.1.html -->
+
+<HEAD>
+<TITLE>foreground 프로세스 중지하기 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>foreground 프로세스 중지하기 보기</H1>
+
+<P>예제:
+
+<PRE WIDTH=80>   <STRONG>find / -name '*.ps' -print</STRONG>
+   ...
+   ...
+   <STRONG>^C</STRONG>
+   <STRONG>pwd</STRONG>
+   /home/jeremy/book
+   <STRONG>find . -name '*.ps' -print</STRONG>
+</PRE>
+
+<P>
+한 사용자가 실수로(?) 
+<SAMP>.ps</SAMP> 문자열로 끝나는 모든 파일을 
+찾는데, 그 찾을 디렉토리를 
+<A HREF="../glossary/gr.html#rootdir">루트 디렉토리</A>로 
+했습니다.</P>
+
+<P>
+이렇게 명령을 내리면, 그 시스템의 모든 디렉토리를 검색하게 되지요. 
+결국 시간이 엄청나게 걸립니다. 이때, 이런 작업을 중지한 경우입니다.
+한 명령을 내릴 때는 먼저 다시 한번 확인 하는 습관이 필요합니다. :-| </P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt1.2.html -->
+
+<HEAD>
+<TITLE>쉘 스크립트 실행하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>쉘 스크립트 실행하기</H1>
+
+<P>
+쉘 스크립트가 만들어서 그것을 실행하기 위해서는 
+먼저 그 파일의 
+<A HREF="../tasks/change_perm.html">접근 권한</A>을 
+실행 가능한 상태로 만들어야 합니다. 그렇지 않으면, 
+<SAMP>Permission denied(권한이 거부됨)</SAMP> 오류 메시지를 보입니다.
+</P>
+
+<P>
+실행 가능한 상태로 만들었다면, 쉘 프롬프트에서 그냥 
+그 파일 이름을 입력하고 엔터를 치면, 그 쉘 스크립트의 
+내용이 실행됩니다.
+</P>
+
+<P>
+단지 자신만 실행 가능하게 그 파일의 접근 권한을 
+바꾸려면 다음과 같이 합니다:</P>
+
+<PRE WIDTH=80>   <STRONG>chmod u+rwx </STRONG>파일이름
+</PRE>
+
+<P>
+이것은 그 파일의 소유주가 그파일을 읽거나,
+쓰거나, 실행할 수 있도록 그 파일의 접근 권한을 
+바꾼 것입니다. 이때 다른 사용자나, 그룹 사용자에 대한 
+접근 권한은 바뀌지 않습니다.
+</P>
+
+<P>
+다른 사용자나, 그룹 사용자도 실행할 수 있게 하려면 다음과 
+같이 합니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>chmod go+rx </STRONG>파일이름
+</PRE>
+
+<UL>
+<LI><A HREF="scrpt1.2.2.html">보기</A></LI>
+<LI><A HREF="scrpt1.2.3.html">문제가 있나요?</A>
+<LI><A HREF="scrpt1.2.4.html">스크립트에서 Bourne 쉘 사용하기</A></LI> 
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

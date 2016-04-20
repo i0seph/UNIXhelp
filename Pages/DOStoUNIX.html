@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- DOStoUNIX.html -->
+
+<HEAD>
+<TITLE>DOS 사용자를 위한 UNIX 설명</TITLE>
+</HEAD>
+
+<BODY>
+<H1>DOS 사용자를 위한UNIX 설명</H1>
+
+<P>
+여기서는 도스 사용자를 위해서 도스의 명령과 유닉스 명령을 비교
+하고 있습니다. 각 명령들의 자세한 설명은 해당 명령어를 선택해서 
+참조 하십시오. </P>
+
+<PRE WIDTH=80>
+<STRONG>설명                        DOS                     UNIX</STRONG>
+<HR>
+파일 목록 보기              dir/w dir               <A HREF="tasks/list.html">ls</A>
+                            dir                     <A HREF="tasks/list.html">ls -l</A>
+파일 내용 보기              type                    <A HREF="tasks/display0.html">cat</A>
+파일내용 화면단위로 보기    type filename | more    <A HREF="tasks/display1.html">more</A>
+
+파일 복사                   copy                    <A HREF="tasks/copying.html">cp</A>
+파일 안의 문자열 찾기       find                    <A HREF="utilities2/grep.html">grep</A>
+                                                    <A HREF="utilities2/grep2.1.html">fgrep</A>
+파일 비교                   comp                    <A HREF="utilities2/diff.html">diff</A>
+파일 이름 바꾸기            rename OR ren           <A HREF="tasks/mv.html">mv</A>
+파일 지우기                 erase OR del            <A HREF="tasks/rm.html">rm</A>
+경로 지우기                 rmdir OR rd             <A HREF="tasks/rm1.2.html">rmdir</A>
+파일 속성 바꾸기            attrib                  <A HREF="tasks/change_perm.html">chmod</A>
+경로 만들기                 mkdir OR md             <A HREF="tasks/mkdir.html">mkdir</A>
+경로 바꾸기                 chdir OR cd             <A HREF="tasks/cd.html">cd</A>
+도움말 보기                 help                    <A HREF="manual/index.html">man</A>
+                                                    <A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?apropos">apropos</A>
+날짜와 시간 보기            date, time              <A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?date">date</A>
+디스크 남은 공간 보기       chkdsk                  <A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?df">df</A>
+파일 인쇄                   print                   <A HREF="tasks/lpr.html">lpr</A>
+프린트 큐 보기              print                   <A HREF="tasks/lpr4.html">lpq</A>
+
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="index.html"><IMG SRC="Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="index/index.html"><IMG SRC="Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

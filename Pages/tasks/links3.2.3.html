@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/links3.2.3.html -->
+
+<HEAD>
+<TITLE>링크 파일이 담겨있는 심벌릭 링크 디렉토리 지우기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>링크 파일이 담겨있는 심벌릭 링크 디렉토리 지우기</H1>
+
+<P>
+만약에 
+<A HREF="links3.2.2.html">심벌릭 링크 디렉토리 지우기</A>로 
+지운다면, 그 안에서 만든 새로운 파일이나, 또 다른 링크 파일들은 
+지워질까요?
+</P>
+
+<P>
+심벌릭 링크의 개념을 이 기회에 확실히 하고 넘어갑시다. 
+이 심벌릭 링크는 단지 원래의 디렉토리의 위치 정보만을 
+가지고 있는 파일입니다. 
+그래서, 이 심벌릭 링크 디렉토리를 지운다고 해서, 
+그 안에 있는 파일들은 지원지지 않습니다.
+</P>
+
+<P>
+이렇기 때문에, 그 심벌릭 링크 디렉토리를 지우면, 
+그 심벌릭 링크 디렉토리 자체만 - 원래 디렉토리의 위치 정보만 - 
+지우는 것입니다. 
+</P>
+
+<P>다음 예제를 보죠:</P>
+
+<PRE WIDTH=80>   <STRONG>pwd</STRONG>
+       <EM>(현재 위치 확인)</EM>
+   /home/tom/reports
+   <STRONG>ls ../tmp/drafts</STRONG>
+       <EM>(이 경로 안에 있는 목록을 보고)</EM>
+   expenditure targets
+   <STRONG>ln -s $HOME/tmp/drafts quarterly</STRONG>
+       <EM>(심벌릭 링크 디렉토리를 만들고)</EM>
+   <STRONG>cd quarterly</STRONG>
+       <EM>(새로 만든 링크된 디렉토리로 이동하고)</EM>
+   <STRONG>ln $HOME/accounts/expenses</STRONG>
+       <EM>(이 파일을 링크하고)</EM>
+   <STRONG>ls</STRONG>
+       <EM>(현재 위치의 목록을 보고)</EM>
+       <EM>(세개의 내용이 있겠지요)</EM>
+   expenditure expenses targets
+   <STRONG>cd ..; rm quarterly</STRONG>
+       <EM>(상위로 올라가서 그 심벌릭 링크 디렉토리를 지우고)</EM>
+   <STRONG>ls ../tmp/drafts</STRONG>
+       <EM>(원래 디렉토리의 내용을 보면)</EM>
+   expenditure expenses targets
+       <EM>(링크된 파일은 여전히 남아 있지요)</EM>
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt2.9.html -->
+
+<HEAD>
+<TITLE>운영체제 시그날 처리</TITLE>
+</HEAD>
+
+<BODY>
+<H1>운영체제의 시그날 처리(trapping)</H1>
+
+<P>
+운영체제의 <A HREF="../didyou/kill.html">시그날</A>을 감지하거나, 
+무시하는 작업이 필요하면, <STRONG>trap</STRONG> 명령을 사용합니다.
+사용법은 다음과 같습니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>trap '<EM>명령목록</EM>' <EM>시그날목록</EM></STRONG>
+</PRE>
+
+<P>
+한번에 여러 명령이나, 여러 시그날 처리가 가능한데, 
+이때, 동시에 여러 시그날을 감지하게 되면, 
+올림차순으로 처리합니다.</p> 
+
+<P>
+trap 명령의 현재 작동 상태를 알아보려면, 다음과 같이 합니다:</p>
+
+<PRE WIDTH=80>   <STRONG>trap</STRONG>
+</PRE>
+<P>
+<UL>
+<LI><A HREF="scrpt2.9.1.html">감지되는 일반적인 시그날</A></LI>
+<LI><A HREF="scrpt2.9.2.html">명령 목록 처리</A></LI>
+<LI><A HREF="scrpt2.9.3.html">보기</A></LI>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

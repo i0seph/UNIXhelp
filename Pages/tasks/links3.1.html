@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/links3.1.html -->
+
+<HEAD>
+<TITLE>ln 명령의 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>ln</SAMP> 명령의 사용 보기</H1>
+
+<P>디렉토리를 링크하는 예제:</P>
+
+<PRE WIDTH=80>   <STRONG>ln -s $HOME/accounts/may</STRONG>
+</PRE>
+
+<P>
+윗 명령은 자신의 홈 디렉토리 안에 있는 
+<SAMP>accounts/may</SAMP> 디렉토리를 현재 작업 디렉토리에 
+링크하는 예제입니다. 이렇게 되면, 현재 디렉토리에서 
+<SAMP>may</SAMP> 디렉토리 안으로 이동하게 되면, 
+원래의 디렉토리로 이동하는 것과 같게 됩니다.
+</P>
+
+<HR>
+
+<P>
+여러 디렉토리를 하나의 링크로 만들기:</P>
+
+<PRE WIDTH=80>   <STRONG>ln -s $HOME/hyperhelp $HOME/metacard experimental</STRONG>
+</PRE>
+
+<P>
+윗 예제는 <SAMP>$HOME/hyperhelp</SAMP> 디렉토리와 
+<SAMP>$HOME/metacard</SAMP> 디렉토리를 현재 디렉토리안의 
+<SAMP>experimental</SAMP>로 심블릭 링크하는 명령입니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

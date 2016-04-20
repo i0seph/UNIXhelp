@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/rm1.1.1.html -->
+
+<HEAD>
+<TITLE>rm 명령으로 파일 지우기 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>rm</SAMP> 명령으로 파일 지우기 보기</H1>
+
+<P>하나의 파일을 지우는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rm help.txt</STRONG>
+</PRE>
+
+<P>
+이것은 현재 디렉토리 안에 있는 <SAMP>help.txt</SAMP> 파일을 
+지웁니다.
+</P>
+
+<HR>
+
+<P>여러 파일을 지우는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rm artwork/figure[2-7]</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>figure2</SAMP>부터 <SAMP>figure7</SAMP>까지 
+해당되는 파일을 지웁니다.
+</P>
+
+<HR>
+
+<P>쓰기 권한이 부여 되어 있지 않은 파일을 지우려고 할 경우</P>
+
+<PRE WIDTH=80>   <STRONG>rm tmp/intro.txt</STRONG>
+   rm: override protection 444 for intro.txt? <STRONG>y</STRONG>
+</PRE>
+
+<P>
+<SAMP>intro.txt</SAMP> 파일은 쓰기 권한이 부여 되어 있지 
+않은 파일인데, 사용자가 지우려고 하니까, 정말 지울 것인지를 
+물어보는 프롬프트가 나타났습니다. 이때, <STRONG>y</STRONG>를 
+입력해서 정말 지운 경우입니다.
+</P>
+
+<HR>
+
+<P>지우기 확인 절차를 가지는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rm -i *.fm</STRONG>
+</PRE>
+
+<P>
+이 명령은 현재 디렉토리 안에 있는 <SAMP>.fm</SAMP>으로 끝나는 
+모든 파일을 지우려고 하는데, 각 파일을 지울 때 마다, 
+정말 그 파일을 지울 것인지를 사용자에게 물어봅니다.
+</P>
+
+<P>
+이때, <STRONG>y</STRONG>를 입력하면, 정말 지우고, 
+<STRONG>n</STRONG>을 입력하면 지우지 않습니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- utilities2/trans1.1.3.html -->
+
+<HEAD>
+<TITLE>tarfile 내용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>tarfile 내용 보기</H1>
+
+<P>
+tar 파일의 내용을 보려면 다음과 같이 합니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>tar tvf project.tar</STRONG>
+</PRE>
+
+<P>
+윗 예제의 경우는 <SAMP>project.tar</SAMP> 파일의 내용, 즉, 
+어떤 파일들이 묶겨져 있는지 확인해 볼 수 있습니다.
+tar 명령에서 사용할 수 있는 여러 옵션들에 대한 
+자세한 설명은 
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?tar">tar 사용자 설명서</A>를 
+참조 하십시오.
+</P>
+
+<P>
+압축되어 있는 tar 파일의 내용을 보려면, 
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?compress">zcat</A> 명령과 
+파이프를 이용합니다. 예를 들어:</p>
+
+<PRE WIDTH=80>   <STRONG>zcat project.tar.Z | tar tvf -</STRONG>
+</PRE>
+
+<P>
+이것은 이 파일의 압축을 풀지도 않고, 그 묶음을 풀지 않고, 
+바로 이 파일의 내용을 살펴 볼 수 있겠지요.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

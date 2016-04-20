@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt2.3.html -->
+
+<HEAD>
+<TITLE>사용자 입력 사용하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>사용자 입력 사용하기</H1>
+
+<P>쉘 스크립트에서,
+<A HREF="../glossary/gs.html#stdin">표준 입력</A>에서 
+어떤한 내용을 입력 받으려면, 다음 예제처럼 합니다.</p>
+
+<PRE WIDTH=80>   echo "이름이 뭐꼬:"
+   read name
+   echo "잘 살고 있나? $name"
+</PRE>
+
+<P>
+이 쉘 스크립트를 실행시키면, 
+사용자에게 이름을 물러보는 프롬프트가 나타나고, 
+사용자는 적당한 내용을 입력하면, 그 값이 <SAMP>name</SAMP> 변수에 
+지정됩니다. 그리고는 그 값을 
+<A HREF="../glossary/gs.html#stdout">표준 출력</A>으로 보여줍니다.</p>
+
+<P>
+만약, 두개 이상의 입력이 필요할 때는, 단어별로 각각의 
+변수를 정의해 둡니다. 사용예:</p>
+
+<PRE WIDTH=80>   echo "Please enter your surname\n"
+   echo "followed by your first name: \c"
+   read name1 name2
+   echo "Welcome to Glasgow $name2 $name1"
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

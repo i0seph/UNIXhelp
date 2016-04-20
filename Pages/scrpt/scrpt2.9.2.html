@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt2.9.2.html -->
+
+<HEAD>
+<TITLE>trap: 명령목록 처리</TITLE>
+</HEAD>
+
+<BODY>
+<A NAME=scrpt2.9.2>
+<H1><SAMP>trap</SAMP>: 명령목록 처리</H1>
+
+<P>
+명령 목록 부분은 작은 따움표로 묶어줍니다. 
+그래서, trap 명령이 실행될 때 한 번 읽혀지고, 
+그 명령목록이 실행될 때 다시 한번 읽혀지게 됩니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>trap '<EM>명령목록</EM>' <EM>시그날목록</EM></STRONG>
+</PRE> 
+
+<P>
+명령 목록부분을 작은 따움표로 묶어주면, 
+시그날 목록에서 지정한 신호들이 감지될 경우에, 
+그 명령 목록 부분이 실행됩니다.
+</P>
+
+<P><EM>명령목록</EM>
+부분을 지정하지 않는다면, 그 <samp>시그날목록</samp>에서 지정한 
+신호가 감지될 경우, 시스템에서 사용되는 초기 작동방법이 진행됩니다.
+</P>
+
+<P>
+<EM>명령목록</EM>
+부분을 빈 따움표(' ' 또는 " ")로 묶는다면, 
+그 <samp>시그날목록</samp>에서 지정한 신호가 감지될 경우,
+쉘에 의해서 무시됩니다.
+</P>
+
+<P>
+<EM>명령목록</EM>
+부분에 특정한 명령 목록을 따움표로 묶어서, 지정할 경우에는, 
+그 <samp>시그날목록</samp>에서 지정한 신호가 감지될 경우,
+그 명령이 실행됩니다. 
+</P>
+
+<UL>
+<LI><A HREF="scrpt2.9.3.html">보기</A></LI>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

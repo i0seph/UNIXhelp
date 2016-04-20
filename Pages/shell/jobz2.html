@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz2.html -->
+
+<HEAD>
+<TITLE>background job으로 실행하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>background job으로 실행하기</H1>
+
+<P>
+한 프로세스를 background <EM>job</EM>으로 실행하고자 한다면, 
+<SAMP>&</SAMP> 문자를 그 명령행 맨 끝에 붙혀 줍니다.
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>find /usr/man -name *.1 -print &gt; sect1 &</STRONG>
+   [1] 2548
+</PRE>
+
+<P>
+이렇게 하면, job 번호 (<SAMP>[</SAMP><EM>n</EM><SAMP>]</SAMP>)와 
+PID (프로세스 번호) 번호를 보여주고, 다시 쉘 프롬프트가 나타납니다. 
+</P>
+
+<P>
+background 작업을 실행 할 때, 
+foreground 에서는 다른 작업을 하기 위해서, background 작업의 
+<A HREF="../commanz/cmd3.2.html">표준 출력 방향을 바꾸어</A> 
+한 파일로 지정한 한 것입니다. 
+이렇게 해야지 쉘 프롬프트 상에서 background 작업에 대한 방해를 
+받지 않고 다른 작업을 할 수 있겠지요.
+</P>
+
+<P>
+이때, 표준 오류(stderr) 장치로 보내지는 
+오류 메시지들에 대한 방향전환이 필요할지도 모릅니다. 
+특별히 지정하지 않는한 현재 사용하고 있는 터미날 화면이 
+바로 stderr가 되기 때문입니다.
+</P>
+
+<P>
+background job으로 실행 할 때, 그 프로그램이 사용자 
+대화방식을 취하는지 확인할 필요가 있습니다. 
+왜냐하면, 사용자의 입력을 기다리는 프로그램을 
+background job으로 실행 해 버리면, 영원히(?) 사용자의 
+반응만 기다리고 있을 테니까요. 이때는 다시 foregroud로 
+바꾸든지, 그 프로세스를 <A HREF="jobz5.html">중지</A>시켜야 합니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt2.6.1.1.html -->
+
+<HEAD>
+<TITLE>case 문 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>case 문 사용 보기</H1>
+
+<P>다음은 제가(옮긴이) 사용하는 hdate (리눅스 date 명령의 결과를 
+한글로 보여주는 스크립트)의 내용입니다.</P>
+
+<PRE WIDTH=80>   <STRONG>cat hdate</STRONG>
+   #!/bin/bash
+   RESULT=`date +"%w"`
+   case "$RESULT" in
+   	0)
+   		hweek="일"
+   		;;
+   	1)
+   		hweek="월"
+   		;;
+   	2)
+   		hweek="화"
+   		;;
+   	3)
+   		hweek="수"
+   		;;
+   	4)
+   		hweek="목"
+   		;;
+   	5)
+   		hweek="금"
+   		;;
+   	6)
+   		hweek="토"
+   		;;
+   esac
+   
+   RESULT=`date +"%p"`
+   case "$RESULT" in
+   	AM)
+   		htime="오전"
+   		;;
+   	PM)
+   		htime="오후"
+   		;;
+   esac
+   date +"%Y년 %m월 %d일 $hweek요일 $htime %l시 %M분 %S초"
+   <STRONG>./hdate </STRONG>
+   1997년 04월 17일 목요일 오후  7시 49분 49초
+</PRE>
+
+<P>더이상 설명이 필요없겠지요? 자세한 사항은 date의 사용자 설명서를 
+참조하세요.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

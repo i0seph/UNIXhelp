@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/ftp2.1.3.4.html -->
+
+<HEAD>
+<TITLE>리모트 호스트의 디렉토리 내용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>리모트 호스트의 디렉토리 내용 보기</H1>
+
+<P>
+리모트 호스트의 디렉토리 내용을 보려면, 두가지 명령을 
+사용할 수 있는데, <strong>ls</strong>는 간단하게 볼 수 있고, 
+<strong>dir</strong>을 자세히 볼 수 있습니다.
+또한 이 명령들의 인자로 다른 디렉토리의 이름이 오면, 
+현재 디렉토리가 아닌 다른 디렉토리의 내용도 볼 수 있습니다.
+예제:</P>
+
+<PRE WIDTH=80>   ftp&gt; <STRONG>ls</STRONG>
+   200 PORT command successful.
+   150 Opening ASCII mode data connection for file list.
+   public
+   reports
+   226 Transfer complete.
+   17 bytes received in 0.26 seconds (0.064 Kbytes/s)
+   ftp&gt;
+   ftp&gt; <STRONG>dir reports/quarterly</STRONG>
+   200 PORT command successful.
+   150 Opening ASCII mode data connection for /bin/ls
+   total 10
+   -rw-rw-rw-  1 eucs99   ug		   9383 Jul 18 15:59 march
+   226 Transfer complete.
+   71 bytes received in 0.26 seconds (0.27 Kbytes/s)
+   ftp&gt;
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

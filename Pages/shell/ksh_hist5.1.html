@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/ksh_hist5.1.html -->
+
+<HEAD>
+<TITLE>이전 명령행 편집 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>이전 명령행 편집 보기</H1>
+
+<P>history list 내용 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>fc -l 27 34</STRONG>
+</PRE>
+
+<P>
+이 명령은 history list의 27번부터 34번까지의 내용을 보여줍니다.
+<SAMP>-l</SAMP> 옵션과 함께 <SAMP>-n</SAMP> 옵션을 사용하면, 
+각 명령의 번호를 보여주지 않습니다.</p>
+
+<HR>
+
+<P>한 명령을 편집하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>fc -e emacs 32</STRONG>
+</PRE>
+
+<P>
+이것은 history list의 32번 명령을 
+<A HREF="../emacs/index.html">EMACS 편집기</A>로 편집하는 경우입니다.
+이때 저장하고 끝내면 그 바뀐 명령이 실행됩니다.
+</P>
+
+<HR>
+
+<P>여러 명령을 편집하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>fc -e vi 27 35</STRONG>
+</PRE>
+
+<P>
+이것은 history list의 27번부터 35번까지의 명령을 
+<A HREF="../vi/index.html">vi 편집기</A>로 열어서 
+편집하는 경우입니다. 
+이때, 저장하고 끝내면, 그 명령 모두가 실행됩니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

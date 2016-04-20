@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tips/umask_tip.html -->
+
+<HEAD>
+<TITLE>umask: 팁</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>umask</SAMP>: 팁</H1>
+
+
+<P>
+이런 umask 값을 지정하는 경우는 
+접속할 때 항상 기본적으로 지정되어야 하는 경우가 
+보통입니다. 그렇기 때문에, 
+login 때 자동으로 실행하는 파일 안에 이 내용을 
+추가하는 것이 보통입니다.
+</P>
+
+<P>
+각 쉘 별로 login 때의 읽혀지는 파일은 다음과 같습니다:</P>
+
+<PRE WIDTH=80><STRONG>Shell               login file</STRONG>
+<HR>
+Bourne shell	    .profile
+Korn shell	    .profile
+BASH		    .profile
+C shell		    .login
+TC shell	    .login
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

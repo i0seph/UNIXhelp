@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/3.6.3.1.html -->
+
+<HEAD>
+<TITLE>다른 호스트에서 파일 복사해 오기 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>다른 호스트에서 파일 복사해 오기 보기</H1>
+
+<P>
+다른 호스트의 자신의 홈 디렉토리에 있는 한 파일을 
+현재 디렉토리로 복사해 오는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rcp goya:notes part1.txt</STRONG>
+</PRE>
+
+<P>
+이것은 
+<SAMP>goya</SAMP> 호스트의 자신의 홈디렉토리에 있는 <SAMP>notes</SAMP>
+파일을 현재 디렉토리의 <SAMP>part1.txt</SAMP> 파일로 복사하는 경우입니다.</P>
+
+<HR>
+
+<P>
+리모트 호스트의 하위 디렉토리에  있는 한 파일을 
+현재의 하위 디렉토리에 복사하는 경우</P> 
+
+<PRE WIDTH=80>   <STRONG>rcp ubik:gnu/rcs/README tmp/gnu_README</STRONG>
+</PRE>
+
+<P>
+이것은 ubik 호스트 자신의 홈 디렉토리에 있는 gnu/rcs/README 파일을 
+현재 디렉토리의 tmp/gnu_README 파일로 복사하는 경우입니다.
+</P>
+
+<HR>
+
+<P>
+리모트 호스트에서 사용하는 ID가 다른 경우:
+</P>
+
+<PRE WIDTH=80>   <STRONG>rcp joe@pollux:News/alt.hypertext tmp/hypertext</STRONG>
+</PRE>
+
+<P>
+이것은 pollux 호스트의 joe라는 사용자 홈 디렉토리에 있는 
+News/alt.hypertext 파일을 현재 디렉토리의 tmp/hypertext 파일로 
+복사하는 경우입니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

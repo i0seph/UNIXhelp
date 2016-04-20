@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- commanz/cmd_sub.html -->
+
+<HEAD>
+<TITLE>명령어 대치하기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>명령어 대치하기</H1>
+
+<P>
+어떠한 출력을 위한 인자 안에서 어떠한 명령을 실행해서 대치되기를 
+원할 때는 해당 명령을 <SAMP>`</SAMP>backquotes<SAMP>`</SAMP> 문자로 
+묶어줍니다. 예를 들면:</P>
+
+<PRE WIDTH=80>   <STRONG>echo The date today is `date +%d/%m/%y`</STRONG>
+   The date today is 17/05/95
+</PRE>
+
+<P>
+윗 명령과 같이 <SAMP>date +%d/%m/%y</SAMP> 명령은 
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?echo">echo</A> 
+명령의 인자로 사용되면서
+그 명령이 실행해서 그 결과값이 출력됩니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

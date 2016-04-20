@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/alias_csh1.html -->
+
+<HEAD>
+<TITLE>alias에서 또 다른 alias 사용하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>alias에서 또 다른 alias 사용하기</H1>
+
+<P>
+alias를 만들 때, 그 정의부분에서 또 다른 alias를 지정할 
+할 수 있습니다. 예를 들어, 먼저:</p>
+
+<PRE WIDTH=80>   <STRONG>alias print lpr</STRONG>
+</PRE>
+
+<P>
+위에서와 같이 <STRONG>print</STRONG>라는 alias를 만들고, 
+다음과 같이 이 alias를 또 다른 alias에서 사용할 수 있습니다:</P>
+
+<PRE WIDTH=80>   <STRONG>alias tree 'cd; ls -R | print'</STRONG>
+</PRE>
+
+<P>
+이렇게 하면, <STRONG>tree</STRONG> 라는 명령을 내리게 되면, 
+내부적으로 <STRONG>print</STRONG>라는 alias를 호출하게 되고, 
+이것들이 서로 
+<A HREF="../commanz/cmd2.3.html">파이프로 연결</A>되어 디렉토리의 내용을 
+인쇄하는 기능을 하겠지요.
+</P>
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

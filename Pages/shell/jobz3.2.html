@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz3.2.html -->
+
+<HEAD>
+<TITLE>foreground 프로세스를 background로 바꾸기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>foreground 프로세스를 background로 바꾸기</H1>
+
+<P>이 작업은 다음과 같은 과정으로 합니다:</P>
+
+<P><STRONG>1. </STRONG>먼저 foreground 프로세스를 
+<A HREF="jobz1.2.html">보류</A>시킨다.</P>
+
+<P><STRONG>2. </STRONG> <STRONG>bg</STRONG> (background) 
+문자를 입력하고, 엔터를 친다.
+</P>
+
+<P>보기:</P>
+
+<PRE WIDTH=80>   <STRONG>lpr -Pps23 part[1-8].ps</STRONG>
+   <STRONG>^Z</STRONG>
+   Stopped
+   <STRONG>bg</STRONG>
+   [1]    lpr -Pps23 interface.ps &
+   <STRONG>jobs</STRONG>
+   [1]    Running              lpr -Pps7 interface.ps
+</PRE>
+
+<P>
+이것은 여러 파일을 인쇄하는 명령을 
+먼저 보류 상태로 만든 후 다시 background 상태로 만든 것입니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

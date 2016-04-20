@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/list1a.html -->
+
+<HEAD>
+<TITLE>ls 명령 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>ls</SAMP> 명령 사용 보기</H1>
+
+<P>현재 디렉토리의 내용 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls</STRONG>
+   README        bago.hlp      helpex.hlp   hyperhelp
+   app-defaults  helpex        hoh.hlp
+</PRE>
+
+<P>
+단순히 명령어 자체만 입력하면, 현재 디렉토리 안에 있는 
+디렉토리와 파일을 보여줍니다.
+</P>
+
+<HR>
+
+<P>
+<A HREF="../glossary/gi.html#inodenumber">inode 번호</A>
+와 파일 형식을 같이 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls -Fi</STRONG>
+     6752 Mail/         102574 SGML/         147215 UNIX_tips/
+   172802 Xapps/         51200 bin/           44801 dead.letter
+    44802 mbox           44809 test*         102733 tmp/
+</PRE>
+
+<P>
+윗 예제는 현재 디렉토리 안에 있는 파일의 그 형식과 inode 번호를 
+같이 보여주는 경우입니다. 여기서 '/' 기호는 디렉토리를 뜻하며, 
+'*' 기호는 그 파일이 
+<A HREF="under_perm2.html">실행 할 수 있도록</A> 권한이 부여된 
+파일임을 나타냅니다.
+</P>
+
+<HR>
+
+<P>
+<A HREF="defining.html">와일드카드</A> 문자를 사용해서 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls *.txt</STRONG>
+   udi1.txt           wais_x500_www.txt
+</PRE>
+
+<P>
+윗 예제는 <SAMP>*.txt</SAMP>로 끝나는 모든 파일을 살펴보는 명령.</P>
+
+<HR>
+
+<P>
+다른 디렉토리 내용 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls ../Mail</STRONG>
+</PRE>
+
+<P>
+윗 예제는 현재 디렉토리의 상위 디렉토리 안에 있는 
+<SAMP>Mail</SAMP> 이라는 디렉토리의 내용을 살펴보는 명령.</P>
+
+<HR>
+
+<P>
+하위 디렉토리의 내용까지 모두 보기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls -R uunet</STRONG>
+   MetaCard    README      README.ftp
+
+   uunet/MetaCard:
+   BLURB.txt  BUGS.txt   FAQ.txt    README.mc  metacard
+
+   uunet/MetaCard/metacard:
+   Makefile      XCmdGlue.c    XTtemplate.c  XtTemplate.c  mc       mchelp
+   README.ext    XCmdGlue.h    XtGlue.c      external.c    mcXThelp mchome
+   XCmdFuncs.c   XCmdNames.h   XtGlue.h      external.h    mcdemo   mctools
+</PRE>
+
+<P>
+윗 예제는 <SAMP>uunet</SAMP> 디렉토리의 내용을 보는데, 
+그 하위 디렉토리의 내용들도 함께 모두 보는 명령입니다.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

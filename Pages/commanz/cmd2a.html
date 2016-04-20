@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- commanz/cmd2a.html -->
+
+<HEAD>
+<TITLE>다른 줄에 명령 입력을 계속하기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>다른 줄에 명령 입력을 계속하기</H1>
+
+<P>
+필요에 따라, 명령행이 너무 길어 줄을 분리해서 입력하고자 할 때는 
+'<SAMP>\</SAMP>' 문자를 입력하고, 
+<SAMP>&lt;엔터&gt;</SAMP>를 쳐서, 계속 입력합니다. 
+예를 들면:</P>
+
+<PRE WIDTH=80>   <STRONG>rcp ubik:/home/roger/recipe.ps .;\</STRONG>&lt;엔터&gt;
+   <STRONG>lpr -Pps3 #6m recipe.ps</STRONG>
+</PRE>
+
+<P>
+윗 명령은 <SAMP>ubik</SAMP> 원격 호스트의 <SAMP>/home/roger</SAMP> 경로 
+안에 있는 <SAMP>recipe.ps</SAMP> 파일을 현재 경로 안으로 복사해 와서 
+<SAMP>ps3</SAMP> 프린터로 여섯번 인쇄하고, 끝나면 편지를 보내도록 
+하는 명령입니다.
+</P>
+
+<P>이런 명령은 복사기 대용으로 사용는데 유용하겠지요</P>
+
+<P>만약 <A HREF="../environment/env6.html">현재 사용하고 있는 쉘</A>이
+Bourne, BASH 또는 Korn 쉘이라면 명령입력이 계속되는 명령행에서는 
+<SAMP>&gt;</SAMP> 문자가 나타납니다.
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>ls -l | grep '^d.........x' &gt; dirs;\</STRONG>
+   &gt;<STRONG> less dirs</STRONG>
+</PRE>
+
+<P>C 또는 Tcsh 쉘을 사용한다면, 이런 프롬프트가 나타나지 않습니다.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

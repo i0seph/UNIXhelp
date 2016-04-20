@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- emacs/replace_query.html -->
+
+<HEAD>
+<TITLE>물어보면서 바꾸기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>물어보면서 바꾸기</H1>
+
+<P>
+이 기능 또한 문서 전체에 걸쳐 바꾸기를 하지만, 
+이때는 해당 문자열이 발견될 때 마다, 
+사용자에게 어떻게 할 것인지를 물어봅니다. 
+</P>
+
+<p>MicroEMACS 편집기 경우:</P>
+
+<P><STRONG>1.</STRONG> <STRONG>M-^R</STRONG> 입력
+
+<PRE WIDTH=80>   Query replace []&lt;META&gt;:
+</PRE>
+
+<P><STRONG>2.</STRONG> 찾을 문자열을 입력하고, META 글쇠 침.
+
+<PRE WIDTH=80>   with []&lt;META&gt;:
+</PRE>
+
+<P><STRONG>3.</STRONG> 바꿀 문자열을 입력하고, META 글쇠 침.
+
+<P>
+여기까지 하면, 찾을 문자열이 처음 발견 되는 곳으로 
+커서가 이동되고 다음과 같은 형식으로 사용자에게 물어봅니다.
+</P>
+
+<PRE WIDTH=80>   Replace 'junk' with 'test'?
+</PRE>
+
+<P><STRONG>4.</STRONG> 이때 다음 중 한 문자를 입력합니다:</P>
+
+<PRE WIDTH=80>
+    <STRONG>y</STRONG>  <EM>(yes, 오냐, 바꾼다.)</EM>
+
+    <STRONG>n</STRONG>  <EM>(no, 아니, 안바꾼다.)</EM>
+
+    <STRONG>!</STRONG>  <EM>(묻지 말고 니 혼자 해!)</EM>
+
+    <STRONG>^G</STRONG> <EM>(그만 하거라.)</EM>
+</PRE>
+
+<hr>
+<p>hanemacs 편집기 경우:</p>
+
+<P>"M-x query-replace" 기능을 이용합니다.
+(자세한 이야기는 GNU emacs의 info 파일을 보세요.)</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

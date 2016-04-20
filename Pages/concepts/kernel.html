@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- concepts/kernel.html -->
+
+<HEAD>
+<TITLE>커널</TITLE>
+</HEAD>
+
+<BODY>
+<H1>커널</H1>
+
+<P>
+kernel(알멩이)이라는 이름에서 보듯이, 
+커널이란, 유닉스 시스템이 시작될 때 - 이것을 
+흔히 <A HREF="../glossary/gb.html#boot">부팅 작업</A>이라고 하지요 -, 
+가장 먼저 읽혀지는 핵심 부분입니다. 
+</P>
+
+<P>
+커널은 그 시스템의 모든 자원을 관리하고, 
+당신이 어떤한 자원을 요청할 때, 그것을 준비해서 당신의 
+타당한 작업을 할 수 있도록 해 줍니다. 
+굳이 당신이 그 커널 자체에 대해서 모두 알아야 할 필요는 없습니다. 
+중요한 것은 커널이 이런 것이고, 이러한 작업을 한다는 것 
+정도만 알아도 충분할 것입니다.</P>
+</P>
+
+<P>
+하나의 커널을 다음과 같이 크게 몇 부분의 기능으로 구성되어 있습니다:</P>
+
+<UL>
+<LI>
+그 시스템의 메모리와 각 프로세스의 할당문제를 관리하는 기능</LI>
+<LI>
+CPU를 사용하는 순서를 정하는 일. 이렇게 함으로 해서, 모든 사용자가 
+골고루 원하는 작업을 동시에 할 수 있도록 하는 일</LI>
+<LI>
+그 시스템에서 처리되는 각종 데이타를 변환, 전송 하는 기능</LI>
+<LI>
+쉘과 연관되어 쉘에서 지시한 작업을 수행하고, 그 결과를 쉘로 보내는 일</LI>
+<LI>
+파일 시스템의 접근 권한을 처리하는 일</LI>
+</UL>
+
+<UL>
+<LI><A HREF="kernel1.html">알고 있나요?</A>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

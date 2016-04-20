@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- examples/ls.html -->
+
+<HEAD>
+<TITLE>ls -l 명령의 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>ls -l</SAMP> 명령 사용 보기</H1>
+
+<P>
+한 파일의 자세한(long) 내용을 보려면 다음과 같이 합니다.</P>
+
+<PRE WIDTH=80>   <STRONG>ls -l file1</STRONG>
+   -rw-r--r--  2 unixjohn doc      3287 Apr  8 12:10 file1
+</PRE>
+
+<P>
+윗 예제에서는 <SAMP>file1</SAMP> 이라는 파일에 대한 정보를 
+다음과 같이 알 수 있습니다:</P>
+
+<PRE WIDTH=80>   -rw-r--r--     <EM>(<A HREF="../tasks/access_permissions.html">접근 권한</A>)</EM>
+   2              <EM>(이 파일의 <A HREF="../tasks/links.html">링크</A> 갯수)</EM>
+   unixjohn       <EM>(소유주)</EM>
+   doc            <EM>(<A HREF="../tasks/change_own.html">그룹</A>)</EM>
+   3287           <EM>(바이트 단위의 파일 크기)</EM>
+   Apr  8 12:10   <EM>(마지막 갱신된 날짜와 시간)</EM>
+</PRE>
+
+<HR>
+
+<P>
+현재 경로의 모든 내용을 자세하게 보려면 다음과 같이 합니다.</P>
+
+<PRE WIDTH=80>   <STRONG>ls -l</STRONG>
+   -rw-------  1 erpl08  iss       4307 Jun 17 10:00 FAQ.xdh
+   drwx------  2 erpl08  iss       1024 Jun 17 10:00 SCCS
+   -rw-------  1 erpl08  iss      15119 Jun 17 10:00 commands.xdh
+   -rw-------  1 erpl08  iss        266 Jun 17 10:00 concepts.xdh
+</PRE>
+
+<P>
+여기서 접근 권한을 표시하고 있는 곳에서 제일 앞에 
+'d'라고 적힌 것은 디렉토리를 뜻합니다.</P>
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

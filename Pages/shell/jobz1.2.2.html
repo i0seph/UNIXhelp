@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz1.2.2.html -->
+
+<HEAD>
+<TITLE>보류 중인 프로세스 다시 실행하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>보류 중인 프로세스 다시 실행하기</H1>
+
+<P>
+현재 보류 중인 프로세스를 다시 실행 하려면, 
+<STRONG>fg</STRONG> 나, <STRONG>bg</strong> 명령을 
+사용합니다. 
+<STRONG>fg</STRONG>는 foreground로, 
+<STRONG>bg</strong>는 background로 작업을 계속합니다.
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>lpr -Pps23 bigfile.ps</STRONG>
+   ...
+   ...
+   <STRONG>^Z</STRONG>
+   Stopped
+   <STRONG>date</STRONG>
+   Thu Feb 18 16:11:05 GMT 1993
+   <STRONG>fg</STRONG>
+   lpr -Pps23 bigfile.ps
+</PRE>
+
+<P>
+이것은 인쇄 작업을 하다가 잠시 보류하고, 
+날짜를 확인 한 후 다시 인쇄 작업을 foreground로 계속 진행하는 
+것입니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/mkdir3.1.html -->
+
+<HEAD>
+<TITLE>/tmp 디렉토리 사용하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>/tmp</SAMP> 디렉토리 사용하기</H1>
+
+<P>
+대부분의 유닉스 시스템에는 임시 저장 장소로 <SAMP>/tmp</SAMP>라는 
+디렉토리가 있습니다. 이 디렉토리는 모든 사용자가, 
+쓰고 지울 수 있도록 권한이 부여되어 있습니다.
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>mkdir /tmp/for_u_tim</STRONG>
+   <STRONG>cp -r surprise /tmp/for_u_tim</STRONG>
+</PRE>
+
+<P>
+위와 같은 명령으로 <SAMP>/tmp</SAMP> 디렉토리에, 
+<SAMP>for_u_tim</SAMP>이라는 디렉토리를 만들고, 
+현재 디렉토리안의 <SAMP>surprise</SAMP>라는 디렉토리 안에 있는 
+모든 내용을 그곳으로 복사합니다.
+</P>
+
+<P>
+이러고는 <SAMP>tim</SAMP> 이라는 사용자에게, 
+<SAMP>/tmp</SAMP> 디렉토리안에 뭔가 있다고 알리면, 
+그 사용자가 그 것을 찾아서 사용하겠지요. 
+</P>
+
+<P>
+물론 이때는 다른 사용자도 사용할 수 있도록, 
+<A HREF="access_permissions.html">접근 권한</A>과 
+<A HREF="change_own.html">그룹 지정</A>을 바르게 
+지정해야겠지요.
+</P>
+
+<P>
+<SAMP>/tmp</SAMP> 디렉토리를 사용할 때는, 
+다른 사용자들도 함께 사용할 수 있도록, 그 사용 용도가 
+끝난 파일은 반드시 지우는 것을 잊지 맙시다.
+</P>
+
+<P>
+한편 <SAMP>/tmp</SAMP> 디렉토리에는 유동적인 정보들을 
+<EM>두지 마십시오</EM>. 이런 것을 모르고 시스템 관리자가 
+모르고 삭제 할 수도 있으니까요. 
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

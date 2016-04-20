@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/bash_hist5.2.html -->
+
+<HEAD>
+<TITLE>fc 명령 이용하기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>fc 명령 이용하기</H1>
+<P>
+명령행의 편집은 <STRONG>fc</STRONG> (fix command) 명령을 사용합니다.
+그 사용법은 다음과 같습니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>fc -e <EM>편집기 </EM>-lnr <EM>첫번호 끝번호</EM></STRONG>
+</PRE>
+
+<P>
+이것은 history list 중에 지정한 첫번호와 끝번호 사이의 
+내용을 편집기로 실행함을 의미합니다. 
+이렇게 해서, 편집기가 실행되면, 그 번호에 해당되는 
+명령들이 있고, 사용자는 필요에 따라 문서 편집기의 편집 명령을 
+이용해 편집하고, 저장하고 끝내고, 이제 history list의 내용이 
+바뀌게 되지요.
+</P>
+
+<P>
+이때, <SAMP>FCEDIT</SAMP> 환경 변수가 지정되어 있으면, 
+특별히 편집기를 지정하지 않으면, 이 편집기를 이용합니다.
+사용 예:</P>
+<PRE WIDTH=80>   <STRONG>FCEDIT=emacs; export FCEDIT</STRONG>
+</PRE>
+<p>
+<UL>
+<LI><A HREF="ksh_hist5.1.html">보기</A></LI>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

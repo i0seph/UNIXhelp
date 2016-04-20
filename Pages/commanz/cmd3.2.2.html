@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- commanz/cmd3.2.2.html -->
+
+<HEAD>
+<TITLE>알고 있나요?</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>알고 있나요?</H1>
+
+<P>
+한 명령이 성공적으로 작동하면, 그 결과는 표준 출력으로 
+보냅니다. 하지만, 오류가 발생할 경우에는 그 오류메시지를 
+일반적으로 표준 에러 파일(/dev/stderr)로 보냅니다. 
+보통 stderr는 현재 당신이 사용하고 있는 터미날입니다. 
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>ls -l part1.txt</STRONG>
+   part1.txt not found
+</PRE>
+
+<P>
+윗 경우는 현재 경로안에, <SAMP>part1.txt</SAMP> 파일이 
+없어, 표준 에러로 그 오류 메시지를 보냈는 경우입니다.
+</P>
+
+<P>
+표준 에러로 보내지는 오류 메시지들도 방향을 바꾸어 
+특정 파일로 저장할수도 있으나, 이것은 그리 바람직한 
+것이 못됩니다. 이런 방법은 각각의 쉘에 따라 그 방법을 
+약간식 다르게 정의하고 있으니, 자세한 사항은 각 쉘의 
+설명서를 참고하시기 바랍니다. (한편, 컴파일러와 같이 
+여러개의 오류를 모두 조사해야 할 경우에는 
+의외로 이방법이 아주 유용하게 쓰이기도 합니다.)
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

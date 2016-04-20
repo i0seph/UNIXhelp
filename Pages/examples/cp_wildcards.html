@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- examples/cp_wildcards.html -->
+
+<HEAD>
+<TITLE>cp 명령에서 특수 문자 사용하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1><SAMP>cp</SAMP> 명령에서 특수 문자 사용하기</H1>
+
+<P>여러 파일을 함께 복사하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>cp *.txt chapt1</STRONG>
+</PRE>
+
+<P>
+이것은 현재 디렉토리 안의 ".txt"로 끝나는 모든 파일을 
+현재 디렉토리의 하위 디렉토리인 <SAMP>chapt1</SAMP> 디렉토리로 
+복사하는 경우입니다.
+</P>
+
+<HR>
+
+<P>
+한 문자가 일치하는 파일만 복사하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>cp sect?b partA</STRONG>
+</PRE>
+
+<P>
+이것은 현재 디렉토리 안에서 <SAMP>sect[1-9]b</SAMP> 와 같은 
+파일들을 하위디렉토리인 <SAMP>partA</SAMP> 디렉토리로 복사하는 경우입니다.</P>
+
+<HR>
+
+<P>
+특정 범위에 포함되는 파일만 복사하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>cp sect[1-4]c partB</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>sect1c</SAMP>, <SAMP>2c</SAMP>,
+<SAMP>3c</SAMP>, <SAMP>sect4c</SAMP> 파일을 <SAMP>partB</SAMP>로 
+복사하는 경우입니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

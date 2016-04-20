@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- examples/umask.html -->
+
+<HEAD>
+<TITLE>umask 명령어 사용의 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>umask 명령의 사용의 보기</H1>
+
+<P>
+자신을 제외한 모든 사용자에게 
+어떠한 권한도 부여하지 않게 하려면 다음과 
+같이 합니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>umask 077</STRONG>
+</PRE>
+
+<P>
+이 숫자를 666, 777 에서 빼면, 
+600 <SAMP>(rw-------)</SAMP>의 권한인 파일, 
+700 <SAMP>(rwx------)</SAMP>의 권한이 디렉토리가 
+초기값으로 지정됩니다.
+</P>
+
+<HR>
+
+<PRE WIDTH=80>   <STRONG>umask 002</STRONG>
+</PRE>
+
+<P>
+윗 예제는 파일의 경우는 
+664 <SAMP>(rw-rw-r--)</SAMP>, 디렉토리의 경우는 
+775 <SAMP>(rwxrwxr-x)</SAMP> 권한이 초기 값으로 지정됩니다.
+
+<HR>
+
+<PRE WIDTH=80>   <STRONG>umask 022</STRONG>
+</PRE>
+
+<P>
+윗 예제는 파일의 경우는 
+644 <SAMP>(rw-r--r--)</SAMP>, 디렉토리의 경우는 
+755 <SAMP>(rwxr-xr-x)</SAMP> 권한이 초기값으로 지정됩니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- shell/jobz4.2.html -->
+
+<HEAD>
+<TITLE>ps 명령 사용 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>ps 명령 사용 보기</H1>
+
+<P>
+현재 자신이 실행하고 있는 프로세스의 정보 보기:</p>
+
+<PRE WIDTH=80>   <STRONG>ps</STRONG>
+      PID TTY         TIME COMMAND
+    13185 ttyAF/ABFd  0:00 rlogind
+    13187 ttyAF/ABFd  0:01 bash
+    13218 ttyAF/ABFd  0:00 ps
+</PRE>
+
+<P>
+현재 세개의 프로세스가 실행 중에 있으며, 
+그 중 하나는 <STRONG>ps</STRONG> 명령 자체이군요.
+<A HREF="pid.html">PID</A> 번호로 보면, 
+제일 먼저 원격 호스트 접속 프로그림으로 현재 시스템에 
+접속해고, 그 다음 현재 쉘로 
+bash 쉘을 사용하고 있네요.
+</P>
+
+<HR>
+
+<P>
+자신이 모든 프로세스 정보 보기(System V 경우):
+</P>
+
+<PRE WIDTH=80>   <STRONG>ps -u joanne</STRONG>
+      PID TTY         TIME COMMAND
+    13251 ttyAF/ABFd  0:00 ps
+    13187 ttyAF/ABFd  0:01 bash
+    18765 ?           0:08 xclock
+     3012 ?           0:00 bash
+     3015 ?           0:00 zmail.ne
+     3016 ?           4:03 zmail.bi
+    18465 ?           0:00 bash
+    18469 ?           0:34 xman
+</PRE>
+
+<P>
+이것은 joanne이라는 사용자가 자신의 모든 프로세스 정보를 
+본 경우입니다. 
+TTY 부분에 <SAMP>?</SAMP> (물음표) 문자가 보이는 것은 
+그 프로세스와 관계된 터미날을 알 수 없음을 나타냅니다.
+</P>
+
+<HR>
+
+<P><A NAME="another">다른 사용자의 프로세스 정보 보기(System V 경우):</A></P>
+
+<PRE WIDTH=80>   <STRONG>ps -u rob</STRONG>
+      PID TTY         TIME COMMAND
+    1390 ttyAH/ABHb  0:18 bash
+    1403 ttyAH/ABHc  0:01 bash
+    1435 ttyAH/ABHY  0:01 bash
+    1471 ttyAH/ABHY  5:57 ream
+    2307 ttyAH/ABHb  0:29 xbiff
+    2315 ttyAH/ABHb  0:27 xbiff
+</PRE>
+
+<P>
+이것은 <SAMP>rob</SAMP>라는 사용자의 
+현재 실행중인 프로세스 정보를 본 경우입니다. 
+세개의 터미날을 사용하면서, 각각 <A HREF="oview2.5.html">bash</A> 쉘을 
+사용하고, 전자 우편 관련 프로그램인 
+ream 하고, <A HREF="../mail/five.2.1.html">biff</A> 프로그램을 
+사용하고 있군요.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

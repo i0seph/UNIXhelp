@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- didyou/vi.1.html -->
+
+<HEAD>
+<TITLE>CR(carriage return) 입력하기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>CR(carriage return) 입력하기</H1>
+
+<P>
+<STRONG>vi</STRONG>에서는, "한 줄" 이라고 말하는 것은 
+두개의 줄바꿈 문자(&lt;RETURN&gt 글쇠를 치면 입력되는 문자) 사이에 
+있는 문자열을 말합니다.
+</P>
+
+<P>
+<STRONG>vi</STRONG>에서는 <STRONG>오른쪽 경계값(wrapmargin)</STRONG>이 
+지정되면, <SAMP>&lt;RETURN&gt;</SAMP> 글쇠를 치지 않아도 
+자동으로 오른쪽 경계 부분에 내용을 입력하면, 줄 바꿈을 해줍니다. 
+즉, 자동으로 줄바꿈 문자를 입력해 줍니다. 
+문제는 여기서 부터 생기는데, 만일 불러온 한 문서에 있는 한 줄이 
+(이때 줄이라고 말하는 것은 앞에서 말한 줄바꿈 문자 사이의 문자열) 
+vi에서 지정한 오른쪽 경계값에 의해서 나뉘어 지게 되고, 
+그것을 편집해서 저장해 버린다면, 
+원래의 줄 모양과 틀려지게 됩니다. 
+사용자는 이런 사실에 대해서 알고 있어야 하며, 
+그에 따른 적당한 작업이 필요합니다. (가령 오른쪽 경계값을 임시로 
+바꾼다든지, 아니면, 그 설정을 해제 한다든지...)
+</P>
+
+<P>
+또한 필요에 따라, <SAMP>&lt;RETURN&gt;</SAMP> 글쇠를 원하는 
+부분에서 칠 수도 있겠지요. 
+</P>
+
+<P>
+<A HREF="vi.2.html">wrapmargin 옵션</A>에 대한 이야기를 
+참고 하세요.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- utilities2/trans1.1.1.html -->
+
+<HEAD>
+<TITLE>파일 묶기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>파일 묶기</H1>
+
+<P>
+여러 파일들이나, 한 디렉토리 안에 있는 모든 파일과 하위디렉토리를 
+묶으려면 다음과 같이 합니다.
+</P>
+
+<PRE WIDTH=80>   <STRONG>tar cvf <EM>tar파일이름</EM>.tar <EM>파일들 </EM>(<EM>디렉토리</EM>)</STRONG>
+</PRE>
+
+<P>
+<SAMP>cvf</SAMP> 옵션은 지정한 파일들이나, 디렉토리안에 있는 모든 파일을 
+묶는데 사용합니다. 
+보다 자세한 것은 
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?tar">tar 사용자 설명서</A>를 
+참조 하십시오.
+이때, 만들어질 묶김 파일은 끝에 <SAMP>.tar</SAMP> 라고 붙히는 것이 
+관례입니다.</P>
+
+<P>
+한 디렉토리 안에 있는 파일과 디렉토리를 모두 묶었을 경우에는 
+그 tar파일의 크기가 엄청나게 크질수도 있지요.
+이럴때는 <A HREF="trans1.1.2.html">compress</A> 명령을 이용해 
+압축하기도 합니다.(이것이 대부분입니다)</P>
+
+<UL>
+<LI><A HREF="../tips/tar.html">팁 ...</A></LI>
+<LI><A HREF="trans1.1.5.html">보기</A></LI>
+</UL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

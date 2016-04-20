@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- utilities2/next.html -->
+
+<HEAD>
+<TITLE>압축된 tar 파일 풀기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>압축된 tar 파일 풀기</H1>
+
+<P>
+압축되어 있는 tar 파일은 
+일반적으로 
+<A HREF="http://unixhelp.ed.ac.uk/CGI/man-cgi?compress">zcat</A> 
+명령으로 압축을 풀어서 그 묶음을 풉니다.
+압축되어 있는 파일임을 뜻하기 위해서 그 파일 이름 끝에 
+.Z 문자열이 더 있습니다. 
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>zcat project.tar.Z | tar xvf -</STRONG>
+</PRE>
+
+<P>
+이것은 <A HREF="../commanz/cmd4.html">파이프</A>를 이용해, 
+먼저 <STRONG>zcat</STRONG> 명령을 이용해 project.tar.Z 파일의 
+압축을 풀고, zcat에의 출력 내용을 tar의 입력 내용으로 해서, 
+그 묶음을 풉니다. 이때, <STRONG>-</STRONG> 문자는 
+tar에서 묶음을 풀 입력 내용을 
+<A HREF="../glossary/gs.html#stdin">표준입력</A>으로 함을 
+뜻합니다. 
+</P>
+
+<P>
+또한 한 압축묶음 파일에서 특정 파일만을 뽑아 낼 수도 있습니다.
+이렇게 하려면, 먼저 그 압축묶음 파일에 어떤 파일들이 묶겨저 있는지를 
+먼저 알아야겠지요. 이것을 안다면, 
+필요에 따라 특정의 하나 이상 파일을 뽑아 내는데, 
+아주 유용하게 쓰입니다.
+예를 들어:</P>
+
+<PRE WIDTH=80>   <STRONG>zcat project.tar.Z | tar xvf - project/main.c</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>project.tar.Z</SAMP> 파일에서 
+<SAMP>main.c</SAMP> 파일만 뽑아내는 경우입니다.
+</P>
+
+<P>
+리눅스에서는 GNU 압축 유틸리티인 gzip 명령을 사용해서 
+tar 파일을 주로 압축합니다. 그래서, 파일 끝 이름이 .gz 라고 붙히는 것이 
+일반적입니다. </P>
+
+<P>즉 project.tar.gz 이런 식으로 되어있습니다.</P>
+
+<P>또한 이런 파일을 풀때, GNU tar 명령을 사용한다면, 
+파이프를 이용할 것 없이 바로, </P>
+
+<PRE>   <STRONG> tar xvzf project.tar.gz</STRONG>
+   
+   <STRONG> tar xvzf project.tar.gz project/man.c</STRONG>
+</PRE>
+
+<P>이런 식으로 그 풀기를 할 수 있습니다.</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

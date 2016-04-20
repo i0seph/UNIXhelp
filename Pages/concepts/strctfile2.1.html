@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- concepts/strctfile2.1.html -->
+
+<HEAD>
+<TITLE>홈 디렉토리의 위치 보기</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>홈 디렉토리의 위치 보기</H1>
+
+<P>
+Joe와 Sarah라는 사용자는 모두 한 시스템을 사용하고 있음에도 불구하고, 
+그들은 각각 다른 영역을 차지하고 있습니다. 
+가령 Joe는 인공지능과 학생이고, Sarah는 수학과 학생이다면, 
+다음과 같은 구조로 이루워 지겠지요.
+</P>
+
+<PRE WIDTH=80>
+
+          /(root)
+             |
+             |
+   ----------------------
+     |              |
+    /tmp          /home
+     |              |
+         ---------------- ... ----
+         |         |             |
+        /ai      /biol          /math
+         |                       |
+    ----------             ---------------
+    |                                    |
+  /joe                                /staff
+                                         |             
+                              ------------------
+                                               |
+                                            /sarah
+</PRE>
+
+<P>
+위에서 보는 바와 같이 Joe 홈 디렉토리의 
+<A HREF="pathfile.html">절대 경로</A>는 <SAMP>/home/ai/joe</SAMP>
+식이고, Sarah의 경우는 <SAMP>/home/math/staff/sarah</SAMP> 식이 됩니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- environment/exmp_csh.html -->
+
+<HEAD>
+<TITLE>환경 변수 값 바꾸기 보기: C and TC shell</TITLE>
+</HEAD>
+
+<BODY>
+<H1>환경 변수 값 바꾸기 보기: C and TC shell</H1>
+
+<P>이번 작업에서만 기본 프린터를 바꾸는 경우:</P>
+
+<PRE>   <STRONG>setenv PRINTER ps2</STRONG>
+</PRE>
+
+<P>
+이 명령이 실행되면, 이제부터 기본프린터로 ps2를 사용합니다.
+</P>
+
+<HR>
+
+<P>다른 프로그램에 편집기로 사용할 편집기를 바꾸는 경우:</P>
+
+<PRE>   <STRONG>setenv EDITOR vi</STRONG>
+</PRE>
+
+<P>
+이렇게 하면, mail과 같은 편집기를 사용하는 프로그램에서 
+편집기를 사용해야 할 경우에, <A HREF="../vi/index.html">vi</A>
+편집기를 실행시킵니다.
+</P>
+
+<HR>
+
+<P>
+<SAMP>.cshrc</SAMP> (<SAMP>.tcshrc</SAMP>) 파일에, 
+환경 변수 값을 새롭게 지정하는 경우:</P>
+
+<PRE>   <STRONG>setenv PAGER less</STRONG>
+</PRE>
+
+<P>
+이렇게 하면, 다음 쉘이 실행 될 때야, 그 값이 바뀌거나, 
+새롭게 지정되겠지요. 이러지 않고, 바로 그 값을 사용하려면, 
+다음과 같이 합니다:</P>
+
+<PRE>   <STRONG>source $HOME/.cshrc</STRONG>
+</PRE>
+
+<P>
+이렇게 하면, <SAMP>.cshrc</SAMP> 파일을 읽어 그 안에 있는 
+각종 변수 값들을 지정합니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

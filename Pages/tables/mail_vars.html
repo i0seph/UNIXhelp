@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tables/mail/vars.html -->
+
+<HEAD>
+<TITLE>유용한 mail 변수들</TITLE>
+</HEAD>
+
+<BODY>
+<H1>유용한 mail 변수들</H1>
+
+<P>
+mail 변수들에 대한 완벽한 설명은 mail의 
+<A HREF="../manual/man_org4.html">사용설명서</A>을 보는 것입니다.
+</P>
+
+<PRE WIDTH=80>
+   <STRONG>변수                 초기값        설명</STRONG>
+<HR>
+
+   askcc                noaskcc       편지 쓰기를 할 때, 
+                                      같이 편지 받을 사람인
+                                      carbon copies 사용자들을 물어봄.
+
+   editheaders                        문서 편집기로 편지를 쓸때, 
+                                      편지 머릿말 부분을
+                                      보임.
+
+   folder=<EM>디렉토리</EM>                    폴더 파일이 저장될 
+                                      디렉토리 지정.
+
+   hold                 nohold        읽을 편지를 system mailbox에
+                                      그대로 둠. mbox 파일 만들지
+                                      않음.
+
+   keepsave             nokeepsave    지운 편지를 system mailbox에 
+                                      그대로 둠.
+
+   PAGER                more          pager지정.
+
+   sign=<EM>signature</EM>                     ~a 명령에서 사용할, 
+                                      "서명(signature)" 지정
+
+   Sign=<EM>signature</EM>                     ~A 명령에서 사용할, 
+                                      "signature" 지정.
+
+   topline=<EM>number</EM>       5             ~t 명령으로 볼 편지 앞부분의 
+                                      줄 수 지정.
+
+   VISUAL=<EM>editor</EM>                      ~v 명령으로 사용할 편집기 지정.
+                                      이때 <A HREF="../glossary/gf.html#fullpath">절대경로이름</A>이어야 함.
+
+</PRE>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

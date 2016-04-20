@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- scrpt/scrpt1.2.3.html -->
+
+<HEAD>
+<TITLE>쉘 스크립트 실행 때 발생하는 오류 메시지들</TITLE>
+</HEAD>
+
+<BODY>
+<H1>쉘 스크립트 실행 때 발생하는 오류 메시지들</H1>
+
+<DL>
+<DT><EM>command_name</EM><SAMP>: command not found</SAMP></DT>
+<DD><P>
+이 경우는 <A HREF="../commanz/path1.html">PATH</A> 환경 변수에 
+지정된 디렉토리 안에는 그런 명령이 없음을 말하는 것입니다. 
+해결 방법은 1) 쉘 스크립트를 그 디렉토리 안으로 
+<A HREF="../tasks/mv.html">옮기든지</A>,
+2) 현재 디렉토리를 포함하도록 
+<A HREF="../environment/index.html">PATH값을 바꾸든지</A>,
+3) 그 명령의 <A HREF="../glossary/gf.html#fullpath">절대 경로</A> 
+사용하면 됩니다.
+보통 <SAMP>$HOME/bin</SAMP> 디렉토리를 만들고, 
+그 디렉토리를 PATH 값에 포함시키고, 쉘 스크립트를 그곳으로 
+옮기는 것이 관례입니다.
+</P></DD>
+
+<DT><EM>기타 여러 오류 메시지들</EM></DT>
+<DD><P>
+이것은 대부분 쉘 스크립트의 문법이 틀렸을 경우에 
+그에 해당되는 오류 메시지들입니다. 대게 쉘 스크립트 작성시 
+오타 때문이거나, 아니면, 쉘 스크립트 문법의 이해 부족으로 
+생기지요.
+</P>
+<P>
+이런 문법적 오류는 쉘 스크립트를 실행할 때, 
+옵션을 사용해서 디버깅 해 볼 수도 있습니다.
+</P></DD>
+</DL>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

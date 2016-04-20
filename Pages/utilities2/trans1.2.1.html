@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- utilities2/trans1.2.1.html -->
+
+<HEAD>
+<TITLE>파일 압축 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>파일 압축 보기</H1>
+
+<P>파일 한개 압축하기:</P>
+
+<PRE WIDTH=80>   <STRONG>ls -l sect5.fm</STRONG>
+   -rw-------  1 erpl08      67584 Sep 30  1992 sect5.fm
+
+   <STRONG>compress sect5.fm
+   ls -l *.Z</STRONG>
+   -rw-------  1 erpl08      33950 Sep 30  1992 sect5.fm.Z
+</PRE>
+
+<P>
+이것은 <SAMP>sect5.fm</SAMP> 파일의 크기를 확인하기 위해 
+먼저 <SAMP><A HREF="../tasks/list4.html">ls -l</A></SAMP> 명령을 
+사용하고, 그 파일을 압축하고, 다시 파일의 크기를 확인해 본 것입니다. 
+크기가 반으로 줄었군요.
+</P>
+
+<HR>
+
+<P>여러 파일 압축하기:</p>
+
+<PRE WIDTH=80>   <STRONG>compress sect[1-8].fm</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>sect1.fm</SAMP> 부터 <SAMP>sect8.fm</SAMP> 파일을 
+압축하는 경우입니다.</p>
+
+<HR>
+
+<P>압축 파일 풀기:</P>
+
+<PRE WIDTH=80>   <STRONG>uncompress sect[1-4].fm.Z</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>sect1.fm.Z</SAMP> 부터 <SAMP>sect4.fm.Z</SAMP> 파일의 
+압축을 푸는 경우입니다:</p>
+
+<HR>
+
+<P>압축된 파일의 그 내용을 압축을 풀지 않고 보는 경우:</p>
+
+<PRE WIDTH=80>   <STRONG>zcat presentation.html.Z | less</STRONG>
+</PRE>
+
+<P>
+이것은 <SAMP>presentation.html</SAMP> 압축 파일을 
+<A HREF="../commanz/cmd4.html">파이프</A>를 이용해서, 
+압축을 풀지않고 그 내용을 보는 경우입니다. 
+</P>
+
+<PRE WIDTH=80>   <STRONG>zcat bibliography.txt.Z &gt; bib.txt; vi bib.txt</STRONG>
+</PRE>
+
+<P>
+윗 예제는 <A HREF="../commanz/cmd3.html">방향전환</A>으로 
+<SAMP>bib.txt</SAMP> 파일을 만들고, 
+그것을 <A HREF="../vi/index.html">vi</A> 편집기를 이용해서 
+편집하는 경우입니다.</p>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- tasks/3.6.2.1a.html -->
+
+<HEAD>
+<TITLE>두개의 리모트 호스트 간의 파일 복사 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>
+두개의 리모트 호스트 간의 파일 복사 보기
+</H1>
+
+<P>
+하나의 다른 리모트 호스트에서 다른 리모트 호스트로 복사하는 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rcp goya:tmp/vi.ref pollux:editors/vi.ref</STRONG>
+</PRE>
+
+<P>
+이것은 "goya" 호스트 홈디덱토리에 있는 tmp/vi.ref 파일을 
+"pollux" 호스트 홈디렉토리의 editors/vi.ref 파일로 복사하는 경우입니다.</P>
+
+<HR>
+
+<P>
+현재 로칼 호스트의 username과 원본 파일이 있는 호스트의 
+username은 같고, 대상 호스트의 username이 다른 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rcp festival:README jamie@scorpio:README</STRONG>
+</PRE>
+
+<P>
+이 명령은 "festival" 호스트의 홈디렉토리에 있는 README 파일을 
+"scorpio" 호스트 "jamie" 사용자의 홈디렉토리로 복사하는 경우입니다.</P>
+
+<HR>
+
+<P>
+두 리모트 호스트가 현재 로칼 호스트의 username과 모두 다른 경우:</P>
+
+<PRE WIDTH=80>   <STRONG>rcp joe@ubik:News/funnies helper@pollux:new_jokes</STRONG>
+</PRE>
+
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>

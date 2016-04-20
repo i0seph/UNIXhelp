@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN//2.0">
+<HTML>
+<!-- Copyright University of Edinburgh -->
+<!-- Version 1.3 -->
+<!-- examples/permissions.html -->
+
+<HEAD>
+<TITLE>접근 권한 보기</TITLE>
+</HEAD>
+
+<BODY>
+<H1>접근 권한 보기</H1>
+
+<PRE WIDTH=80>   <STRONG>ls -l file1</STRONG>
+   -rw-------  2 unixjohn     3287 Apr  8 12:10 file1
+</PRE>
+
+<P>
+윗 파일은 소유주만이 읽고 쓰기가 가능함을 나타냅니다.
+</P>
+
+<HR>
+
+<PRE WIDTH=80>   <STRONG>ls -l file2</STRONG>
+   -rw-r--r--  2 unixjohn     3287 Apr  8 12:11 file2
+</PRE>
+
+<P>
+소유주, 그룹을 포함한 모든 사용자가 읽을 수는 있으나, 
+소유주만 쓰기가 가능함을 나타냅니다.
+</P>
+
+<HR>
+
+<PRE WIDTH=80>   <STRONG>ls -l myprog</STRONG>
+   -rwx--x--x  2 unixjohn     3287 Apr  8 12:10 myprog
+</PRE>
+
+<P>
+소유주는 읽고, 쓰고, 실행할 수 있고, 
+그룹 소속원과 기타 다른 사람들은 실행만 가능함을 
+나타냅니다.
+</P>
+
+<HR>
+
+<PRE WIDTH=80>   <STRONG>ls -l</STRONG>
+   ...
+   drwxr-x---  2 erpl08       1024 Jun 17 10:00 SCCS
+</PRE>
+
+<P>
+이것은 디렉토인데, 
+소유주는 읽고, 쓰고, 그 안에 있는 실행 파일을 
+실행시킬 수 있으며, 
+해당 그룹에 속한 사용자는 읽기와 실행만 가능하며, 
+기타 다른 모든 사람은 이 
+<A HREF="../tables/access_permissions.html">디렉토리의 접근 권한</A>에 대해서 
+아무것도 허락되어 있지 않음을 알 수 있습니다.
+</P>
+
+<!--Footer-->
+<HR>
+<ADDRESS>
+<A HREF="../index.html"><IMG SRC="../Images/weetop.gif" ALT="[차례]"></A>
+<A HREF="http://unixhelp.ed.ac.uk/CGI/unixhelp_search"><IMG SRC="../Images/weesearch.gif" ALT="[찾기]"></A>
+<A HREF="../index/index.html"><IMG SRC="../Images/weeindex.gif" ALT="[색인]"></A>
+<!--MAINTNAME-->
+</ADDRESS>
+
+</BODY>
+</HTML>
